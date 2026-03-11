@@ -142,7 +142,7 @@ export function Cavera({ onBack }: CaveraProps) {
         {/* CTA */}
         <div className="flex justify-center border-t border-white/10 pt-20">
            <a 
-             href="https://www.figma.com/design/YOUR_FIGMA_LINK"
+             href="https://www.figma.com/design/xUd8QtFXiBxRxczQ05O0Rn/Clothing-UI?node-id=0-1&t=qQdzY9wbXvPbZFE4-1"
              target="_blank"
              rel="noopener noreferrer"
              className="group relative bg-[#D9FF00] text-black px-10 py-5 font-black text-xl uppercase tracking-wider hover:scale-105 transition-transform"

@@ -173,7 +173,7 @@ export function WhatsApp1990s({ onBack }: WhatsApp1990sProps) {
         {/* CTA */}
         <div className="flex justify-center border-t border-white/10 pt-20">
            <a 
-             href="https://www.figma.com/design/Qgr4ZdigW02AahROYE2cqm/Whatsapp-1990s"
+             href="https://www.figma.com/design/Qgr4ZdigW02AahROYE2cqm/Whatsapp-1990s?node-id=0-1&t=0QaKWzIVeKvc1iJM-1"
              target="_blank"
              rel="noopener noreferrer"
              className="group relative bg-[#D9FF00] text-black px-10 py-5 font-black text-xl uppercase tracking-wider hover:scale-105 transition-transform"

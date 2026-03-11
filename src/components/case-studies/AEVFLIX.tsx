@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowLeft, Figma, ArrowUpRight, Monitor, Star } from "lucide-react";
 import aevflixHero from "../../../projects/aevflix front.png";
 import aevflixHome from "../../../projects/aevflix front.png";
+import aevflixLogin from "../../../projects/aevflix login.png.webp";
 import aevflixDetail from "../../assets/86778278013cf222446ddeb883153a3a19d6c644.png";
 import aevflixProfiles from "../../assets/f17df54b1bdf2935e53bfea649bf5c196018d623.png";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
@@ -127,7 +128,8 @@ export function AEVFLIX({ onBack }: AEVFLIXProps) {
                  {[
                     { title: "HOME VIEW", image: aevflixHome, desc: "Featured content & curated rows" },
                     { title: "DETAIL VIEW", image: aevflixDetail, desc: "Rich metadata & episodes" },
-                    { title: "PROFILES", image: aevflixProfiles, desc: "User personalization" }
+                    { title: "PROFILES", image: aevflixProfiles, desc: "User personalization" },
+                    { title: "LOGIN", image: aevflixLogin, desc: "Account access flow" }
                  ].map((mod, i) => (
                     <div key={i} className="bg-[#111] p-4 border border-white/10 rounded-xl group hover:border-[#D9FF00] transition-colors">
                        <div className="flex justify-between items-end mb-4">
@@ -151,7 +153,7 @@ export function AEVFLIX({ onBack }: AEVFLIXProps) {
         {/* CTA */}
         <div className="flex justify-center border-t border-white/10 pt-20">
            <a 
-             href="https://www.figma.com/design/lwVSPVIFi7H1Pd4e3OXaxF/AEVFLIX?node-id=0-1&t=0KDO71FS3NZ1zDYE-1"
+             href="https://www.figma.com/design/MNkAZnWVYjfllh58y176PL/AEVFLIX?node-id=0-1&t=jROfvtCp0pDP2cFe-1"
              target="_blank"
              rel="noopener noreferrer"
              className="group relative bg-[#D9FF00] text-black px-10 py-5 font-black text-xl uppercase tracking-wider hover:scale-105 transition-transform"

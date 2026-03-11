@@ -154,7 +154,7 @@ export function ToneUp({ onBack }: ToneUpProps) {
         {/* CTA */}
         <div className="flex justify-center">
            <a 
-             href="https://www.figma.com/design/94LASDImNBZld1HxxxhsYB/ToneUp?node-id=0-1&t=viX9az5xBZKWIW99-1"
+             href="https://www.figma.com/design/94LASDImNBZld1HxxxhsYB/ToneUp?node-id=0-1&t=dhH7sZRwUcrBuOdK-1"
              target="_blank"
              rel="noopener noreferrer"
              className="group relative bg-[#D9FF00] text-black px-10 py-5 font-black text-xl uppercase tracking-wider hover:scale-105 transition-transform"
