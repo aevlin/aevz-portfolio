@@ -21,7 +21,7 @@ export function Contact() {
                  &gt; Whether you have a specific project in mind or just want to chat about design, feel free to reach out.
               </p>
               
-              <div className="flex flex-wrap justify-center gap-4 mt-4">
+              <div className="flex flex-wrap justify-center gap-3 mt-4">
                  <SocialPill 
                     icon={<Mail size={20} />} 
                     text="Email" 
@@ -53,7 +53,7 @@ function SocialPill({ icon, text, href }: { icon: React.ReactNode, text: string,
          href={href}
          target={href.startsWith('http') ? "_blank" : undefined}
          rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-         className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 bg-black text-white hover:border-[#D9FF00] hover:text-black hover:bg-[#D9FF00] transition-all duration-300 font-bold text-base hover:scale-105 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+         className="inline-flex h-16 min-w-[220px] items-center justify-center gap-3 whitespace-nowrap px-10 py-4 rounded-full border border-white/20 bg-black text-white hover:border-[#D9FF00] hover:text-black hover:bg-[#D9FF00] transition-all duration-300 font-bold text-sm leading-none hover:scale-105 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
       >
          {icon}
          {text}
