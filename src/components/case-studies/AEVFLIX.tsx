@@ -2,9 +2,8 @@ import { motion } from "motion/react";
 import { ArrowLeft, Figma, ArrowUpRight, Monitor, Star } from "lucide-react";
 import aevflixHero from "../../../projects/aevflix front.png";
 import aevflixHome from "../../../projects/aevflix front.png";
+import aevflixAbout from "../../../projects/aevflix about.png";
 import aevflixLogin from "../../../projects/aevflix login.png.webp";
-import aevflixDetail from "../../assets/86778278013cf222446ddeb883153a3a19d6c644.png";
-import aevflixProfiles from "../../assets/f17df54b1bdf2935e53bfea649bf5c196018d623.png";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 
 interface AEVFLIXProps {
@@ -126,9 +125,8 @@ export function AEVFLIX({ onBack }: AEVFLIXProps) {
                  </div>
                  
                  {[
-                    { title: "HOME VIEW", image: aevflixHome, desc: "Featured content & curated rows" },
-                    { title: "DETAIL VIEW", image: aevflixDetail, desc: "Rich metadata & episodes" },
-                    { title: "PROFILES", image: aevflixProfiles, desc: "User personalization" },
+                    { title: "FRONT VIEW", image: aevflixHome, desc: "Featured content & landing hero" },
+                    { title: "ABOUT", image: aevflixAbout, desc: "Platform overview and intro" },
                     { title: "LOGIN", image: aevflixLogin, desc: "Account access flow" }
                  ].map((mod, i) => (
                     <div key={i} className="bg-[#111] p-4 border border-white/10 rounded-xl group hover:border-[#D9FF00] transition-colors">

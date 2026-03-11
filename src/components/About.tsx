@@ -118,8 +118,8 @@ export function About() {
                     {/* Compact boxes with visible icons */}
                     <SkillIcon image={figmaIcon} name="Figma" scale={1.1} />
                     <SkillIcon image={sketchIcon} name="Sketch" scale={0.95} />
-                    <SkillIcon image={xdIcon} name="XD" scale={1.15} />
-                    <SkillIcon image={psIcon} name="Ps" scale={0.9} />
+                    <SkillIcon image={xdIcon} name="XD" scale={1.46} />
+                    <SkillIcon image={psIcon} name="Ps" scale={1.28} />
                     <SkillIcon image={htmlIcon} name="HTML" scale={0.9} />
                     <SkillIcon image={cssIcon} name="CSS" scale={0.9} />
                     <SkillIcon image={jsIcon} name="JS" scale={0.82} />
@@ -283,7 +283,7 @@ function SkillIcon({ image, name, scale = 1 }: { image: string, name: string, sc
       <div 
          className="flex flex-col items-center justify-center gap-2 p-3 bg-[#111111] rounded-lg border border-white/10 hover:border-[#D9FF00] hover:bg-[#1A1A1A] transition-all group cursor-default min-h-[96px]"
       >
-         <div className="transition-transform duration-300 group-hover:scale-110 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-md bg-black/20 p-2">
+         <div className="transition-transform duration-300 group-hover:scale-110 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-md bg-black/20 p-2">
             <img 
                src={image} 
                alt={name} 
@@ -291,7 +291,7 @@ function SkillIcon({ image, name, scale = 1 }: { image: string, name: string, sc
                style={{ transform: `scale(${scale})` }}
             />
          </div>
-         <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-wider group-hover:text-white text-center">
+         <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-wider group-hover:text-white text-center whitespace-nowrap">
             {name}
          </span>
       </div>

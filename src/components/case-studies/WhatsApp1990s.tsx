@@ -5,7 +5,6 @@ import whatsappUI from "../../../projects/Whatsapp 1990s UI.png";
 import whatsappCallLogs from "../../../projects/Call logs.png";
 import whatsappContactInfo from "../../../projects/Contact Info.png";
 import whatsappContactInfoAlt from "../../../projects/Contact Info-1.png";
-import whatsappMoreInfo from "../../../projects/More info.png";
 import whatsappSettings from "../../../projects/Settings.png";
 import whatsappStatus from "../../../projects/Status.png";
 import whatsappStatusBar from "../../../projects/Status Bar.png";
@@ -21,7 +20,6 @@ export function WhatsApp1990s({ onBack }: WhatsApp1990sProps) {
     { title: "Call Logs", image: whatsappCallLogs },
     { title: "Contact Info", image: whatsappContactInfo },
     { title: "Profile Detail", image: whatsappContactInfoAlt },
-    { title: "More Info", image: whatsappMoreInfo },
     { title: "Status", image: whatsappStatus },
     { title: "Status Bar", image: whatsappStatusBar },
     { title: "Settings", image: whatsappSettings },
