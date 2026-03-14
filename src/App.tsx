@@ -20,6 +20,15 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const lenisRef = useRef<Lenis | null>(null);
 
+  const resetScrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true, force: true });
+    }
+  };
+
   useLayoutEffect(() => {
     if (loading) return;
 
@@ -69,14 +78,15 @@ export default function App() {
   }, [loading, currentView]); 
 
   useEffect(() => {
-    if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo(0, 0);
-    }
+    resetScrollToTop();
+    const rafId = requestAnimationFrame(() => {
+      resetScrollToTop();
+    });
+    return () => cancelAnimationFrame(rafId);
   }, [currentView]);
 
   const handleProjectClick = (caseStudy: string) => {
+    resetScrollToTop();
     if (caseStudy === "toneup") setCurrentView("toneup");
     else if (caseStudy === "aevflix") setCurrentView("aevflix");
     else if (caseStudy === "cavera") setCurrentView("cavera");
@@ -84,6 +94,7 @@ export default function App() {
   };
 
   const handleBackToPortfolio = () => {
+    resetScrollToTop();
     setCurrentView("portfolio");
   };
 

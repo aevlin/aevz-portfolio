@@ -4,6 +4,7 @@ import aevflixHero from "../../../projects/aevflix front.png";
 import aevflixHome from "../../../projects/aevflix front.png";
 import aevflixAbout from "../../../projects/aevflix about.png";
 import aevflixLogin from "../../../projects/aevflix login.png.webp";
+import aevflixVideo from "../../../aevflix.mp4";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 
 interface AEVFLIXProps {
@@ -61,7 +62,7 @@ export function AEVFLIX({ onBack }: AEVFLIXProps) {
              <div className="w-full md:w-auto bg-[#111] border border-white/10 p-6 rounded-xl">
                 <div className="grid grid-cols-2 gap-x-12 gap-y-6">
                    <MetaItem label="ROLE" value="UI/UX Designer" />
-                   <MetaItem label="TIMELINE" value="4 Weeks" />
+                   <MetaItem label="TIMELINE" value="1 Week" />
                    <MetaItem label="STACK" value="Figma" />
                    <MetaItem label="VERSION" value="v2.1.0" />
                 </div>
@@ -70,10 +71,16 @@ export function AEVFLIX({ onBack }: AEVFLIXProps) {
 
           {/* Clean Hero Image - Using user provided asset */}
           <div className="relative w-full aspect-video border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-[#111]">
-             <ImageWithFallback 
-               src={aevflixHero} 
-               alt="AEVFLIX Hero" 
+             <video
+               src={aevflixVideo}
                className="w-full h-full object-contain bg-black grayscale hover:grayscale-0 transition-all duration-700"
+               autoPlay
+               muted
+               loop
+               playsInline
+               controls
+               poster={aevflixHero}
+               preload="metadata"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
           </div>

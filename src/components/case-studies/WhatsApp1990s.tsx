@@ -75,7 +75,7 @@ export function WhatsApp1990s({ onBack }: WhatsApp1990sProps) {
              <div className="w-full md:w-auto bg-[#111] border border-white/10 p-6 rounded-xl">
                 <div className="grid grid-cols-2 gap-x-12 gap-y-6">
                    <MetaItem label="ROLE" value="UI/UX Designer" />
-                   <MetaItem label="TIMELINE" value="2 Weeks" />
+                   <MetaItem label="TIMELINE" value="3-4 Days" />
                    <MetaItem label="STACK" value="Figma" />
                    <MetaItem label="VERSION" value="v0.9.beta" />
                 </div>

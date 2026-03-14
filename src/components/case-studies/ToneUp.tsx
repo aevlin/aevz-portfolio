@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowLeft, Figma, ArrowUpRight, Star } from "lucide-react";
 import Design from "../../imports/Design-137-600";
 import toneUpHero from "../../../projects/Design.png";
+import toneupVideo from "../../../toneup.mp4";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 
 interface ToneUpProps {
@@ -59,7 +60,7 @@ export function ToneUp({ onBack }: ToneUpProps) {
              <div className="w-full md:w-auto bg-[#111] border border-white/10 p-6 rounded-xl">
                 <div className="grid grid-cols-2 gap-x-12 gap-y-6">
                    <MetaItem label="ROLE" value="UI/UX Designer" />
-                   <MetaItem label="TIMELINE" value="3 Weeks" />
+                   <MetaItem label="TIMELINE" value="1 Week" />
                    <MetaItem label="STACK" value="Figma" />
                    <MetaItem label="VERSION" value="v1.0.4" />
                 </div>
@@ -67,10 +68,16 @@ export function ToneUp({ onBack }: ToneUpProps) {
           </div>
 
           <div className="relative w-full aspect-video border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-[#111]">
-             <ImageWithFallback
-               src={toneUpHero}
-               alt="ToneUp Hero"
+             <video
+               src={toneupVideo}
                className="w-full h-full object-contain bg-[#dff0f0]"
+               autoPlay
+               muted
+               loop
+               playsInline
+               controls
+               poster={toneUpHero}
+               preload="metadata"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
           </div>

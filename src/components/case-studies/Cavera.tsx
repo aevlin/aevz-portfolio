@@ -58,7 +58,7 @@ export function Cavera({ onBack }: CaveraProps) {
              <div className="w-full md:w-auto bg-[#111] border border-white/10 p-6 rounded-xl">
                 <div className="grid grid-cols-2 gap-x-12 gap-y-6">
                    <MetaItem label="ROLE" value="UI/UX Designer" />
-                   <MetaItem label="TIMELINE" value="2 Weeks" />
+                   <MetaItem label="TIMELINE" value="1 Day" />
                    <MetaItem label="STACK" value="Figma" />
                    <MetaItem label="VERSION" value="v1.0.0" />
                 </div>

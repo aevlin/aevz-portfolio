@@ -131,7 +131,7 @@ function ProjectCard({ title, category, image, rotation, index, onClick }: any) 
             <div className="relative aspect-[4/3] bg-black overflow-hidden mb-4 border border-black/5">
                {/* Pre-load image to prevent pop-in */}
                <div className="w-full h-full bg-gray-200 absolute inset-0 animate-pulse" /> 
-               
+
                <ImageWithFallback 
                   src={image} 
                   alt={title}
@@ -152,7 +152,7 @@ function ProjectCard({ title, category, image, rotation, index, onClick }: any) 
                   {title}
                </h3>
                <span className="font-mono text-xs font-bold text-gray-400 uppercase tracking-widest border-t border-gray-200 pt-2 w-full mt-2">
-                  {category} • 2024
+                  {category} • 2025
                </span>
             </div>
 
