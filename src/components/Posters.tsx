@@ -143,7 +143,7 @@ function GenZCard({ poster, index }: { poster: any, index: number }) {
          }}
       >
          {/* The Card Structure */}
-         <div className="w-full h-full bg-[#0a0a0a] border border-[#333] group-hover:border-[#D9FF00] transition-colors duration-200 relative pointer-events-none group-hover:pointer-events-auto">
+         <div className="w-full h-full bg-[#0a0a0a] border border-[#333] group-hover:border-[#D9FF00] transition-colors duration-200 relative">
             
             {/* Top Tape Strip */}
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-white/10 backdrop-blur-sm transform rotate-1 z-20" />
@@ -153,7 +153,7 @@ function GenZCard({ poster, index }: { poster: any, index: number }) {
                <ImageWithFallback 
                   src={poster.src} 
                   alt={poster.title} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:contrast-110 transition-all duration-500 pointer-events-none"
+                  className="w-full h-full object-cover group-hover:contrast-110 transition-all duration-500 pointer-events-none"
                />
                
                {/* Scanlines Overlay */}
