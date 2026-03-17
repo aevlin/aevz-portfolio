@@ -150,18 +150,24 @@ export function About() {
                     <div className="absolute left-[7px] top-2 bottom-2 w-[2px] border-l-2 border-dotted border-black/20 hidden md:block" />
 
                     <ExperienceItem 
+                       role="UI/UX Developer" 
+                       org="NOVIQ LABS" 
+                       date="March 2026 - Present" 
+                       duration="Current"
+                       isCurrent
+                    />
+                    <ExperienceItem 
                        role="Media Lead" 
                        org="National Service Scheme" 
                        date="July 2025 - Present" 
-                       duration="4 months"
+                       duration="8 months"
                        isCurrent
                     />
                     <ExperienceItem 
                        role="Design Co-Lead" 
                        org="IEEE SB AJCE" 
-                       date="March 2025 - Present" 
-                       duration="8 months"
-                       isCurrent
+                       date="March 2025 - March 2026" 
+                       duration="1 year"
                     />
                     <ExperienceItem 
                        role="UI/UX Intern" 
