@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useSpring } from "motion/react";
 import myPhoto from "../../IMG_2146.jpg";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Sparkles, Crown, Flame, Star, Mic2 } from "lucide-react";
+import { Sparkles, Crown, Flame, Star, Mic2, FileText, ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
 
 export function Hero() {
@@ -141,6 +141,28 @@ export function Hero() {
                       <Mic2 size={12} />
                       <span>Available for Gigs & Design Work</span>
                    </div>
+               </div>
+
+               <div className="mt-8">
+                  <a
+                     href="https://drive.google.com/file/d/1Mro8PtIt8ID4BlUezrURhz02H8udoZTV/view?usp=sharing"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="group inline-flex items-center gap-4 rounded-full border-2 border-[#D9FF00] bg-[#D9FF00] px-6 py-4 text-black shadow-[0_14px_40px_rgba(217,255,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:border-white"
+                  >
+                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-[#D9FF00] transition-colors duration-300 group-hover:bg-[#111] group-hover:text-white">
+                        <FileText size={20} />
+                     </div>
+                     <div className="text-left">
+                        <div className="font-mono text-[10px] font-bold uppercase tracking-[0.22em] opacity-70">
+                           Resume
+                        </div>
+                        <div className="flex items-center gap-2 text-lg font-black uppercase tracking-tight">
+                           <span>View My Resume</span>
+                           <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        </div>
+                     </div>
+                  </a>
                </div>
             </div>
          </div>
