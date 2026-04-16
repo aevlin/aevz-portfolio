@@ -74,7 +74,7 @@ export function Posters() {
                <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#D9FF00] text-black font-bold font-mono text-xs uppercase -rotate-2 mb-4">
                      <Sparkles size={12} className="fill-black" />
-                     Archive_2024
+                     Archive_2026
                   </div>
                   <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-[0.85]">
                      Poster <br/>
