@@ -148,7 +148,6 @@ export function About() {
                  <div className="space-y-8 relative">
                     {/* Vertical Dotted Line */}
                     <div className="absolute left-[7px] top-2 bottom-2 w-[2px] border-l-2 border-dotted border-black/20 hidden md:block" />
-
                     <ExperienceItem 
                        role="UI/UX Developer" 
                        org="NOVIQ LABS" 
@@ -170,17 +169,23 @@ export function About() {
                        duration="1 year"
                     />
                     <ExperienceItem 
-                       role="UI/UX Intern" 
-                       org="Cognifyz Technologies" 
-                       date="Apr 2025 - May 2025" 
-                       duration="2 months"
-                    />
-                    <ExperienceItem 
                        role="Web Design Intern" 
                        org="Tisser Technologies LLP" 
                        date="April 2025" 
                        duration="1 month"
                        desc="Built responsive web pages using HTML, CSS, Bootstrap, & JS."
+                    />
+                    <ExperienceItem 
+                       role="Graphic Designer" 
+                       org="TEDx AJCE" 
+                       date="2025 - 2026" 
+                       duration="Completed"
+                    />
+                    <ExperienceItem 
+                       role="Sub Committee Lead" 
+                       org="NASA Space Apps" 
+                       date="2025 - 2026" 
+                       duration="Completed"
                     />
                     <ExperienceItem 
                        role="Design Lead-W" 
