@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { ArrowLeft, Figma, ArrowUpRight, Star } from "lucide-react";
-import Design from "../../imports/Design-137-600";
 import toneUpHero from "../../../projects/Design.png";
 import toneupVideo from "../../../toneup.mp4";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
@@ -121,14 +120,15 @@ export function ToneUp({ onBack }: ToneUpProps) {
                  </div>
               </section>
 
-              {/* SVG Showcase (Keep original vector but framed) */}
-              <section className="bg-[#111] border border-white/10 p-2 rounded-xl overflow-hidden relative group">
+              {/* Figma Embed */}
+              <section className="bg-[#111] border border-white/10 p-2 rounded-xl overflow-hidden relative group md:col-span-12 md:-mx-6">
                  <div className="absolute top-4 right-4 bg-[#D9FF00] text-black text-[10px] font-bold px-2 py-1 z-10">VECTOR VIEW</div>
-                 <div className="h-[600px] overflow-auto custom-scrollbar relative">
-                    <div className="min-w-[1000px] origin-top-left scale-[0.8] md:scale-100 opacity-80 group-hover:opacity-100 transition-opacity">
-                       <Design />
-                    </div>
-                 </div>
+                 <iframe
+                   title="ToneUp Figma Embed"
+                   src="https://embed.figma.com/design/94LASDImNBZld1HxxxhsYB/ToneUp?node-id=0-1&embed-host=share"
+                   className="h-[84vh] min-h-[820px] w-full rounded-lg border-0 bg-white"
+                   allowFullScreen
+                 />
               </section>
 
            </div>
@@ -184,17 +184,6 @@ export function ToneUp({ onBack }: ToneUpProps) {
          }
          .text-stroke-white {
              -webkit-text-stroke: 1px rgba(255,255,255,0.3);
-         }
-         .custom-scrollbar::-webkit-scrollbar {
-             width: 8px;
-             height: 8px;
-         }
-         .custom-scrollbar::-webkit-scrollbar-track {
-             background: #111;
-         }
-         .custom-scrollbar::-webkit-scrollbar-thumb {
-             background: #333;
-             border-radius: 4px;
          }
       `}</style>
     </div>

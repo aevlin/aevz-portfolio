@@ -155,6 +155,22 @@ export function WhatsApp1990s({ onBack }: WhatsApp1990sProps) {
                     ))}
                  </div>
               </section>
+
+              <section className="space-y-6 md:col-span-12 md:-mx-6">
+                 <div className="flex items-center gap-4">
+                    <span className="w-8 h-[2px] bg-[#D9FF00]" />
+                    <h3 className="text-2xl font-bold uppercase tracking-widest">Live Figma Embed</h3>
+                 </div>
+
+                 <div className="overflow-hidden rounded-xl border border-white/10 bg-[#111] p-3 shadow-2xl">
+                    <iframe
+                      title="WhatsApp 1990s Figma Embed"
+                      src="https://embed.figma.com/design/Qgr4ZdigW02AahROYE2cqm/Whatsapp-1990s?node-id=0-1&embed-host=share"
+                      className="h-[84vh] min-h-[820px] w-full rounded-lg border-0 bg-white"
+                      allowFullScreen
+                    />
+                 </div>
+              </section>
               
               {/* Original Hero Image embedded as a "detail" */}
               <div className="border border-white/10 p-2 rounded-lg bg-[#050505] flex justify-center">
