@@ -178,8 +178,8 @@ export function About() {
                     <ExperienceItem 
                        role="Graphic Designer" 
                        org="TEDx AJCE" 
-                       date="2025 - 2026" 
-                       duration="Completed"
+                       date="May 2026" 
+                       duration="May 2026"
                     />
                     <ExperienceItem 
                        role="Sub Committee Lead" 
