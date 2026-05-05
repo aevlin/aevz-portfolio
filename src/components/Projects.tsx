@@ -70,9 +70,8 @@ export function Projects({ onProjectClick }: { onProjectClick: (id: string) => v
                </motion.div>
                
                <h2 className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.8]">
-                  FEATURED <br/>
-                  <span className="text-white text-stroke-black">PROJECTS</span>
-               </h2>
+                  PROJECTS
+                </h2>
             </div>
 
             <div className="max-w-xs pb-4">
