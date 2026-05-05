@@ -3,6 +3,7 @@ import { ArrowUpRight, Sticker } from "lucide-react";
 import toneUpHero from "../../projects/Design.png";
 import aevflixHome from "../../projects/aevflix front.png";
 import caveraHero from "../../projects/Cavera- Landing Page.png";
+import pgconnectHero from "../../projects/pgconnect.png";
 import whatsappUI from "../../projects/Whatsapp 1990s UI.png";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -29,6 +30,14 @@ export function Projects({ onProjectClick }: { onProjectClick: (id: string) => v
        category: "E-Commerce",
        image: caveraHero,
        rotation: -1
+    },
+    {
+       id: "pgconnect",
+       title: "PGConnect",
+       category: "Web App",
+       image: pgconnectHero,
+       rotation: 1,
+       href: "https://aevz-pg-connect.vercel.app"
     },
     {
        id: "whatsapp1990s",
@@ -81,7 +90,13 @@ export function Projects({ onProjectClick }: { onProjectClick: (id: string) => v
                key={project.id}
                {...project}
                index={index}
-               onClick={() => onProjectClick(project.id)}
+               onClick={() => {
+                  if (project.href) {
+                    window.open(project.href, "_blank", "noopener,noreferrer");
+                    return;
+                  }
+                  onProjectClick(project.id);
+               }}
             />
          ))}
       </div>
