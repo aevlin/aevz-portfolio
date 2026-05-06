@@ -24,7 +24,7 @@ const FramerIcon = () => (
 const PhotoshopIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
     <rect width="24" height="24" rx="4" fill="#001E36"/>
-    <text x="12" y="16.5" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#31A8FF" textAnchor="middle">Ps</text>
+    <text x="3" y="16" fontFamily="sans-serif" fontSize="13" fontWeight="bold" fill="#31A8FF">Ps</text>
     <rect x="0.5" y="0.5" width="23" height="23" rx="3.5" stroke="#31A8FF" strokeOpacity="0.3"/>
   </svg>
 );
@@ -32,7 +32,7 @@ const PhotoshopIcon = () => (
 const XDIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
     <rect width="24" height="24" rx="4" fill="#2E001F"/>
-    <text x="12" y="16.5" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#FF61F6" textAnchor="middle">Xd</text>
+    <text x="3" y="16" fontFamily="sans-serif" fontSize="13" fontWeight="bold" fill="#FF61F6">Xd</text>
     <rect x="0.5" y="0.5" width="23" height="23" rx="3.5" stroke="#FF61F6" strokeOpacity="0.3"/>
   </svg>
 );
@@ -50,24 +50,26 @@ const SketchIcon = () => (
 
 const HTMLIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-        <path d="M4 2L20 2L18.5 19L12 22L5.5 19L4 2Z" fill="#E34F26"/>
-        <path d="M12 4V19.9L16.9 17.8L18 5H12Z" fill="#EF652A"/>
-        <text x="12" y="16.5" fill="white" fontSize="12" fontWeight="bold" fontFamily="sans-serif" textAnchor="middle">5</text>
+        <path d="M2.5 2.5h19l-1.7 18.2L12 23.5l-7.8-2.8L2.5 2.5z" fill="#E34F26"/>
+        <path d="M12 21.5v-17h7l-1.3 14.5-5.7 2.5z" fill="#EF652A"/>
+        <path d="M12 13.5v2.8h-4l-.4-4.2h4.4zm0-6v2.8H7.3l.4 4.2h4.3v-2.8H8.8l-.2-1.4h3.4z" fill="#FFF"/>
+        <path d="M12 16.3l-2.4-.9-.2-2h-2.8l.3 4 5.1 1.6v-2.7zm4.3-2.8l.2-2.8H12v2.8h4.3zm.5-6H12V10h4.6l.2-2.5z" fill="#EBEBEB"/>
     </svg>
 )
 
 const CSSIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-        <path d="M4 2L20 2L18.5 19L12 22L5.5 19L4 2Z" fill="#1572B6"/>
-        <path d="M12 4V19.9L16.9 17.8L18 5H12Z" fill="#33A9DC"/>
-        <text x="12" y="16.5" fill="white" fontSize="12" fontWeight="bold" fontFamily="sans-serif" textAnchor="middle">3</text>
+        <path d="M2.5 2.5h19l-1.7 18.2L12 23.5l-7.8-2.8L2.5 2.5z" fill="#1572B6"/>
+        <path d="M12 21.5v-17h7l-1.3 14.5-5.7 2.5z" fill="#33A9DC"/>
+        <path d="M12 16.3l-2.4-.9-.2-2h-2.8l.3 4 5.1 1.6v-2.7zm4.3-2.8l.2-2.8H12v2.8h4.3zm.5-6H12V10h4.6l.2-2.5z" fill="#FFF"/>
+        <path d="M12 13.5v2.8h-4l-.4-4.2h4.4zm0-6v2.8H7.3l.4 4.2h4.3v-2.8H8.8l-.2-1.4h3.4z" fill="#EBEBEB"/>
     </svg>
 )
 
 const JSIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-        <rect width="24" height="24" fill="#F7DF1E"/>
-        <text x="18" y="20" fill="black" fontSize="14" fontWeight="bold" fontFamily="sans-serif" textAnchor="end">JS</text>
+        <rect width="24" height="24" rx="2" fill="#F7DF1E"/>
+        <path d="M12.235 17.584c-.38-.28-.845-.55-1.425-.55-.655 0-1.165.25-1.165.73 0 .44.38.65 1.05.85.99.3 2.14.71 2.14 2.17 0 1.25-1.02 2.216-2.6 2.216-1.57 0-2.43-.88-2.76-1.55l1.62-.97c.2.45.65.92 1.25.92.56 0 1.01-.25 1.01-.73 0-.48-.42-.64-1.09-.85-.98-.3-2.1-.73-2.1-2.16 0-1.28 1.06-2.15 2.53-2.15 1.2 0 2.06.6 2.45 1.2l-1.5.89zm-5.46.74c-.38-.3-.88-.58-1.51-.58-.8 0-1.34.34-1.34.92 0 .49.42.71 1.23.94 1.11.31 2.37.75 2.37 2.3 0 1.48-1.21 2.48-2.92 2.48-1.78 0-2.82-1-3.23-1.78l1.83-1.05c.23.5.76 1.04 1.47 1.04.66 0 1.2-.28 1.2-.82 0-.54-.48-.74-1.28-.97-1.1-.32-2.31-.76-2.31-2.28 0-1.42 1.21-2.41 2.84-2.41 1.34 0 2.34.68 2.76 1.36l-1.68.99z" fill="black"/>
     </svg>
 )
 
@@ -86,10 +88,7 @@ const PythonIcon = () => (
 )
 
 const CIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-        <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z" fill="#00599C"/>
-        <path d="M15.4 16.5C14.5 17.5 13.3 18 12 18C8.7 18 6 15.3 6 12C6 8.7 8.7 6 12 6C13.3 6 14.5 6.5 15.4 7.5L13.3 9.6C13 9.2 12.5 9 12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C12.5 15 13 14.8 13.3 14.4L15.4 16.5Z" fill="white"/>
-    </svg>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C" className="w-full h-full object-contain" />
 )
 
 export function Skills() {

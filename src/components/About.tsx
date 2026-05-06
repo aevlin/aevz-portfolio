@@ -1,15 +1,19 @@
 import { motion } from "motion/react";
 import { Star } from "lucide-react";
 
-// Asset Imports
-import figmaIcon from "../../figma-logo-icon-figma-app-editable-transparent-background-premium-social-media-design-for-digital-download-free-png.png";
-import psIcon from "../../Photoshop-logo.png";
-import sketchIcon from "../../images.png";
-import xdIcon from "../../Adobe_XD-Logo.wine.png";
-import htmlIcon from "../../174854.png";
-import bsIcon from "../../Bootstrap_logo.svg.png";
-import cssIcon from "../../CSS3_logo.svg.png";
-import jsIcon from "../../javascript-seeklogo.com.svg";
+// External Devicon URLs
+const icons = {
+  figma: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+  sketch: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg",
+  xd: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg",
+  ps: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
+  html: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+  css: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+  js: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  bs: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+  python: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  c: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
+};
 
 export function About() {
   return (
@@ -115,15 +119,17 @@ export function About() {
                  </h3>
                  
                  <div className="grid grid-cols-4 gap-2">
-                    {/* Compact boxes with visible icons */}
-                    <SkillIcon image={figmaIcon} name="Figma" scale={1.1} />
-                    <SkillIcon image={sketchIcon} name="Sketch" scale={0.95} />
-                    <SkillIcon image={xdIcon} name="XD" scale={1.46} />
-                    <SkillIcon image={psIcon} name="Ps" scale={1.28} />
-                    <SkillIcon image={htmlIcon} name="HTML" scale={0.9} />
-                    <SkillIcon image={cssIcon} name="CSS" scale={0.9} />
-                    <SkillIcon image={jsIcon} name="JS" scale={0.82} />
-                    <SkillIcon image={bsIcon} name="Bs" scale={0.88} />
+                    {/* Compact boxes with visible real actual icons */}
+                    <SkillIcon image={icons.figma} name="Figma" />
+                    <SkillIcon image={icons.sketch} name="Sketch" />
+                    <SkillIcon image={icons.xd} name="XD" />
+                    <SkillIcon image={icons.ps} name="Ps" />
+                    <SkillIcon image={icons.html} name="HTML" />
+                    <SkillIcon image={icons.css} name="CSS" />
+                    <SkillIcon image={icons.js} name="JS" />
+                    <SkillIcon image={icons.bs} name="Bs" />
+                    <SkillIcon image={icons.python} name="Python" />
+                    <SkillIcon image={icons.c} name="C" />
                  </div>
               </div>
 
@@ -289,18 +295,22 @@ function ExperienceItem({ role, org, date, duration, desc, isCurrent }: any) {
    );
 }
 
-function SkillIcon({ image, name, scale = 1 }: { image: string, name: string, scale?: number }) {
+function SkillIcon({ image, name, scale = 1, svgIcon: SvgIcon }: { image?: string, name: string, scale?: number, svgIcon?: React.ElementType }) {
    return (
       <div 
          className="flex flex-col items-center justify-center gap-2 p-3 bg-[#111111] rounded-lg border border-white/10 hover:border-[#D9FF00] hover:bg-[#1A1A1A] transition-all group cursor-default min-h-[96px]"
       >
          <div className="transition-transform duration-300 group-hover:scale-110 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-md bg-black/20 p-2">
-            <img 
-               src={image} 
-               alt={name} 
-               className="w-full h-full object-contain" 
-               style={{ transform: `scale(${scale})` }}
-            />
+            {image ? (
+               <img 
+                  src={image} 
+                  alt={name} 
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain" 
+                  style={{ transform: `scale(${scale})` }}
+               />
+            ) : SvgIcon ? (
+               <SvgIcon />
+            ) : null}
          </div>
          <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-wider group-hover:text-white text-center whitespace-nowrap">
             {name}
