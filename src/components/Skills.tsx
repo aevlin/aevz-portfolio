@@ -24,7 +24,7 @@ const FramerIcon = () => (
 const PhotoshopIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
     <rect width="24" height="24" rx="4" fill="#001E36"/>
-    <text x="3" y="16" fontFamily="sans-serif" fontSize="13" fontWeight="bold" fill="#31A8FF">Ps</text>
+    <text x="12" y="16.5" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#31A8FF" textAnchor="middle">Ps</text>
     <rect x="0.5" y="0.5" width="23" height="23" rx="3.5" stroke="#31A8FF" strokeOpacity="0.3"/>
   </svg>
 );
@@ -32,7 +32,7 @@ const PhotoshopIcon = () => (
 const XDIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
     <rect width="24" height="24" rx="4" fill="#2E001F"/>
-    <text x="3" y="16" fontFamily="sans-serif" fontSize="13" fontWeight="bold" fill="#FF61F6">Xd</text>
+    <text x="12" y="16.5" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#FF61F6" textAnchor="middle">Xd</text>
     <rect x="0.5" y="0.5" width="23" height="23" rx="3.5" stroke="#FF61F6" strokeOpacity="0.3"/>
   </svg>
 );
@@ -52,7 +52,7 @@ const HTMLIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         <path d="M4 2L20 2L18.5 19L12 22L5.5 19L4 2Z" fill="#E34F26"/>
         <path d="M12 4V19.9L16.9 17.8L18 5H12Z" fill="#EF652A"/>
-        <path d="M12 4V5H6.5L7 10H12V11H12.5H16.4L16 15L12 16.5V19.9L16.9 17.8L17.5 10H12V4Z" fill="white"/>
+        <text x="12" y="16.5" fill="white" fontSize="12" fontWeight="bold" fontFamily="sans-serif" textAnchor="middle">5</text>
     </svg>
 )
 
@@ -60,15 +60,14 @@ const CSSIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         <path d="M4 2L20 2L18.5 19L12 22L5.5 19L4 2Z" fill="#1572B6"/>
         <path d="M12 4V19.9L16.9 17.8L18 5H12Z" fill="#33A9DC"/>
-        <path d="M12 4V5H6.5L7 10H12V11H12.5H16.4L16 15L12 16.5V19.9L16.9 17.8L17.5 10H12V4Z" fill="white" style={{transform: 'scaleX(-1) translate(-24px, 0)'}}/> 
+        <text x="12" y="16.5" fill="white" fontSize="12" fontWeight="bold" fontFamily="sans-serif" textAnchor="middle">3</text>
     </svg>
 )
 
 const JSIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         <rect width="24" height="24" fill="#F7DF1E"/>
-        <path d="M6 20L6 18C6 16.8954 6.89543 16 8 16H10V18H8V20H6Z" fill="black"/> 
-        <path d="M16 8V18C16 19.1046 15.1046 20 14 20H12V18H14V8H16Z" fill="black"/>
+        <text x="18" y="20" fill="black" fontSize="14" fontWeight="bold" fontFamily="sans-serif" textAnchor="end">JS</text>
     </svg>
 )
 
@@ -76,6 +75,20 @@ const BootstrapIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         <rect width="24" height="24" rx="4" fill="#7952B3"/>
         <path d="M7 6H13C15.5 6 17 7.5 17 9.5C17 11 16 12 15 12.5C16.5 13 17.5 14 17.5 16C17.5 18.5 15.5 20 12.5 20H7V6ZM10 8.5V11.5H12.5C13.5 11.5 14.5 11 14.5 10C14.5 9 13.5 8.5 12.5 8.5H10ZM10 14V17.5H12.5C14 17.5 15 17 15 15.5C15 14.5 14 14 12.5 14H10Z" fill="white"/>
+    </svg>
+)
+
+const PythonIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <path d="M12 2C8.686 2 8 3.5 8 3.5L7.99 7.5H16V9.5H8C5.5 9.5 4 11 4 13.5C4 16 5.5 17 5.5 17L8.5 17V15C8.5 13.343 9.843 12 11.5 12H16C17.657 12 19 10.657 19 9V4.5C19 2.5 15.314 2 12 2ZM10.5 4C10.776 4 11 4.224 11 4.5C11 4.776 10.776 5 10.5 5C10.224 5 10 4.776 10 4.5C10 4.224 10.224 4 10.5 4Z" fill="#3776AB"/>
+        <path d="M12 22C15.314 22 16 20.5 16 20.5L16.01 16.5H8V14.5H16C18.5 14.5 20 13 20 10.5C20 8 18.5 7 18.5 7L15.5 7V9C15.5 10.657 14.157 12 12.5 12H8C6.343 12 5 13.343 5 15V19.5C5 21.5 8.686 22 12 22ZM13.5 20C13.224 20 13 19.776 13 19.5C13 19.224 13.224 19 13.5 19C13.776 19 14 19.224 14 19.5C14 19.776 13.776 20 13.5 20Z" fill="#FFD43B"/>
+    </svg>
+)
+
+const CIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z" fill="#00599C"/>
+        <path d="M15.4 16.5C14.5 17.5 13.3 18 12 18C8.7 18 6 15.3 6 12C6 8.7 8.7 6 12 6C13.3 6 14.5 6.5 15.4 7.5L13.3 9.6C13 9.2 12.5 9 12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C12.5 15 13 14.8 13.3 14.4L15.4 16.5Z" fill="white"/>
     </svg>
 )
 
@@ -92,6 +105,8 @@ export function Skills() {
     { name: "CSS3", level: 88, icon: CSSIcon, category: "FRONTEND" },
     { name: "JAVASCRIPT", level: 75, icon: JSIcon, category: "SCRIPTING" },
     { name: "BOOTSTRAP", level: 85, icon: BootstrapIcon, category: "FRAMEWORK" },
+    { name: "PYTHON", level: 80, icon: PythonIcon, category: "BACKEND" },
+    { name: "C", level: 75, icon: CIcon, category: "SYSTEMS" },
   ];
 
   return (
