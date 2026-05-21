@@ -12,7 +12,6 @@ const icons = {
   js: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   bs: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
   python: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-  c: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
 };
 
 export function About() {
@@ -129,7 +128,6 @@ export function About() {
                     <SkillIcon image={icons.js} name="JS" />
                     <SkillIcon image={icons.bs} name="Bs" />
                     <SkillIcon image={icons.python} name="Python" />
-                    <SkillIcon image={icons.c} name="C" />
                  </div>
               </div>
 
