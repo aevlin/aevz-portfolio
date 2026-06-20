@@ -210,26 +210,6 @@ export function About() {
                        date="Apr 2024 - Mar 2025" 
                        duration="1 year"
                     />
-                     <ExperienceItem 
-                       role="Arts Captain" 
-                       org="Girideepam Bethany HSS" 
-                       date="2022 - 2023" 
-                       duration="1 year"
-                    />
-                    <ExperienceItem 
-                       role="Club President" 
-                       org="LEO Club International" 
-                       date="2020 - 2023" 
-                       duration="3 years"
-                       desc="Leo Club of Kottayam Buds (District 318 B)"
-                    />
-                    <ExperienceItem 
-                       role="MD Vice President" 
-                       org="LEO Club International" 
-                       date="2020 - 2022" 
-                       duration="2 years"
-                       desc="Secured 'Multiple District Vice President' position throughout Kerala."
-                    />
                  </div>
 
                  {/* Receipt Footer / Barcode */}
