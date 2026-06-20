@@ -62,7 +62,7 @@ export function About() {
                     I'm <strong className="text-white">Aevlin Prince</strong>, a passionate designer from Kottayam, Kerala, currently pursuing my studies at Amal Jyothi College of Engineering. I specialize in creating meaningful digital experiences that blend aesthetics with functionality.
                  </p>
                  <p>
-                    With experience in UI/UX design, web development, and brand identity, I bring a holistic approach to every project. My journey in design has been shaped by various leadership roles in IEEE, ACM, NSS, and LEO Club International.
+                    With experience in UI/UX design, web development, and brand identity, I bring a holistic approach to every project. My journey in design has been shaped by various leadership roles in IEEE, ACM, and NSS.
                  </p>
                  <p>
                     I believe in design that tells stories, solves problems, and creates lasting impact. Whether it's crafting intuitive interfaces, building responsive websites, or developing brand identities, I approach each project with attention to detail and user-centered thinking.
@@ -162,41 +162,51 @@ export function About() {
                        role="Graphic Designer" 
                        org="Dreamztree Training Academy and Consultancy" 
                        date="June 2026 - Present" 
-                       duration="Current"
+                       startDate="June 2026"
+                       isCurrent
+                    />
+                    <ExperienceItem 
+                       role="Graphic Designer" 
+                       org="Hexa Apiarium Pvt. Ltd" 
+                       date="May 2026 - Present" 
+                       startDate="May 2026"
                        isCurrent
                     />
                     <ExperienceItem 
                        role="UI/UX Developer" 
                        org="NOVIQ LABS" 
                        date="March 2026 - Present" 
-                       duration="Current"
+                       startDate="March 2026"
                        isCurrent
                     />
                     <ExperienceItem 
                        role="Media Lead" 
                        org="National Service Scheme" 
                        date="July 2025 - Present" 
-                       duration="8 months"
+                       startDate="July 2025"
                        isCurrent
                     />
                     <ExperienceItem 
                        role="Design Co-Lead" 
                        org="IEEE SB AJCE" 
                        date="March 2025 - March 2026" 
-                       duration="1 year"
+                       startDate="March 2025"
+                       endDate="March 2026"
                     />
                     <ExperienceItem 
                        role="Web Design Intern" 
                        org="Tisser Technologies LLP" 
                        date="April 2025" 
-                       duration="1 month"
+                       startDate="April 2025"
+                       endDate="April 2025"
                        desc="Built responsive web pages using HTML, CSS, Bootstrap, & JS."
                     />
                     <ExperienceItem 
                        role="Graphic Designer" 
                        org="TEDx AJCE" 
                        date="May 2026" 
-                       duration="May 2026"
+                       startDate="May 2026"
+                       endDate="May 2026"
                     />
                     <ExperienceItem 
                        role="Sub Committee Lead" 
@@ -208,7 +218,8 @@ export function About() {
                        role="Design Lead-W" 
                        org="ACM AJCE STUDENT CHAPTER" 
                        date="Apr 2024 - Mar 2025" 
-                       duration="1 year"
+                       startDate="Apr 2024"
+                       endDate="Mar 2025"
                     />
                  </div>
 
@@ -253,7 +264,59 @@ export function About() {
   );
 }
 
-function ExperienceItem({ role, org, date, duration, desc, isCurrent }: any) {
+function parseMonthYear(value: string) {
+   const [monthRaw, yearRaw] = value.trim().split(/\s+/);
+   const months: Record<string, number> = {
+      jan: 0, january: 0,
+      feb: 1, february: 1,
+      mar: 2, march: 2,
+      apr: 3, april: 3,
+      may: 4,
+      jun: 5, june: 5,
+      jul: 6, july: 6,
+      aug: 7, august: 7,
+      sep: 8, sept: 8, september: 8,
+      oct: 9, october: 9,
+      nov: 10, november: 10,
+      dec: 11, december: 11,
+   };
+
+   const month = months[monthRaw.toLowerCase()];
+   const year = Number(yearRaw);
+   if (month === undefined || Number.isNaN(year)) return null;
+   return { month, year };
+}
+
+function formatDuration(startDate?: string, endDate?: string) {
+   if (!startDate) return null;
+
+   const start = parseMonthYear(startDate);
+   if (!start) return null;
+
+   const end = endDate ? parseMonthYear(endDate) : { month: new Date().getMonth(), year: new Date().getFullYear() };
+   if (!end) return null;
+
+   let totalMonths = (end.year - start.year) * 12 + (end.month - start.month);
+   if (totalMonths <= 0) totalMonths = 1;
+
+   if (totalMonths < 12) {
+      return `${totalMonths} month${totalMonths === 1 ? "" : "s"}`;
+   }
+
+   const years = Math.floor(totalMonths / 12);
+   const months = totalMonths % 12;
+
+   if (months === 0) {
+      return `${years} year${years === 1 ? "" : "s"}`;
+   }
+
+   return `${years} year${years === 1 ? "" : "s"} ${months} month${months === 1 ? "" : "s"}`;
+}
+
+function ExperienceItem({ role, org, date, duration, startDate, endDate, desc, isCurrent }: any) {
+   const computedDuration = formatDuration(startDate, endDate);
+   const displayDuration = computedDuration ?? duration;
+
    return (
       <div className="relative pl-0 md:pl-8 group">
          {/* Timeline Dot */}
@@ -261,7 +324,7 @@ function ExperienceItem({ role, org, date, duration, desc, isCurrent }: any) {
          
          <div className="flex justify-between items-baseline mb-1">
             <h4 className="font-bold text-lg leading-none">{role}</h4>
-            <span className="font-mono text-[10px] text-gray-500 whitespace-nowrap">{duration}</span>
+            <span className="font-mono text-[10px] text-gray-500 whitespace-nowrap">{displayDuration}</span>
          </div>
          
          <p className="font-black text-xs uppercase tracking-wide mb-1 text-black/80">{org}</p>
