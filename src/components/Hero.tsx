@@ -62,7 +62,7 @@ export function Hero() {
         >
            <span className="hover:text-[#D9FF00] transition-colors whitespace-nowrap" data-cursor="hover">UI/UX Designer</span>
            <Star className="w-3 h-3 md:w-4 md:h-4 text-[#D9FF00] fill-[#D9FF00] animate-spin-slow shrink-0" />
-           <span className="hover:text-[#D9FF00] transition-colors whitespace-nowrap" data-cursor="hover">Poster Designer</span>
+           <span className="hover:text-[#D9FF00] transition-colors whitespace-nowrap" data-cursor="hover">Graphic Designer</span>
            <Star className="w-3 h-3 md:w-4 md:h-4 text-[#D9FF00] fill-[#D9FF00] animate-spin-slow shrink-0" />
            <span className="hover:text-[#D9FF00] transition-colors whitespace-nowrap" data-cursor="hover">Singer-Songwriter</span>
         </motion.div>
@@ -124,7 +124,7 @@ export function Hero() {
 
             <div className="space-y-6 max-w-md mx-auto md:mx-0">
                <p className="text-sm md:text-base text-gray-400 font-mono leading-relaxed border-l-2 border-[#D9FF00] pl-4">
-                  My name is <span className="text-white font-bold">Aevlin Prince</span>, I'm a <span className="text-white">UI/UX Designer</span>, <span className="text-white">Poster Designer</span> & <span className="text-[#D9FF00] font-bold">Singer-Songwriter</span> based in Kerala.
+                  My name is <span className="text-white font-bold">Aevlin Prince</span>, I'm a <span className="text-white">Graphic Designer</span>, <span className="text-white">UI/UX Designer</span> & <span className="text-[#D9FF00] font-bold">Singer-Songwriter</span> based in Kerala.
                </p>
 
                <div className="relative">

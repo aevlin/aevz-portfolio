@@ -7,6 +7,9 @@ const icons = {
   sketch: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg",
   xd: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg",
   ps: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
+  ai: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg",
+  id: "https://cdn.simpleicons.org/adobeindesign/FF3366",
+  canva: "https://cdn.simpleicons.org/canva/00C4CC",
   html: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
   css: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
   js: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
@@ -91,10 +94,10 @@ export function About() {
                  <div className="space-y-6 font-mono text-sm">
                     <div className="border-b border-black/10 pb-4">
                        <div className="flex justify-between font-bold mb-1">
-                          <span>Amal Jyothi College</span>
-                          <span>Current</span>
+                          <span>Amal Jyothi College of Engineering</span>
+                          <span>2027</span>
                        </div>
-                       <p className="text-black/70 text-xs">Engineering</p>
+                       <p className="text-black/70 text-xs">Computer Science & Engineering</p>
                     </div>
 
                     <div className="border-b border-black/10 pb-4">
@@ -119,10 +122,13 @@ export function About() {
                  
                  <div className="grid grid-cols-4 gap-2">
                     {/* Compact boxes with visible real actual icons */}
-                    <SkillIcon image={icons.figma} name="Figma" />
-                    <SkillIcon image={icons.sketch} name="Sketch" />
-                    <SkillIcon image={icons.xd} name="XD" />
                     <SkillIcon image={icons.ps} name="Ps" />
+                    <SkillIcon image={icons.figma} name="Figma" />
+                    <SkillIcon image={icons.ai} name="Ai" />
+                    <SkillIcon image={icons.sketch} name="Sketch" />
+                    <SkillIcon image={icons.xd} name="Adobe XD" />
+                    <SkillIcon image={icons.id} name="Id" />
+                    <SkillIcon image={icons.canva} name="Canva" />
                     <SkillIcon image={icons.html} name="HTML" />
                     <SkillIcon image={icons.css} name="CSS" />
                     <SkillIcon image={icons.js} name="JS" />
@@ -152,6 +158,13 @@ export function About() {
                  <div className="space-y-8 relative">
                     {/* Vertical Dotted Line */}
                     <div className="absolute left-[7px] top-2 bottom-2 w-[2px] border-l-2 border-dotted border-black/20 hidden md:block" />
+                    <ExperienceItem 
+                       role="Graphic Designer" 
+                       org="Dreamztree Training Academy and Consultancy" 
+                       date="June 2026 - Present" 
+                       duration="Current"
+                       isCurrent
+                    />
                     <ExperienceItem 
                        role="UI/UX Developer" 
                        org="NOVIQ LABS" 
