@@ -94,8 +94,7 @@ export function Hero() {
                </div>
 
                <div className="relative overflow-hidden bg-gray-200 aspect-[3/4]">
-                  <ImageWithFallback src={myPhoto} alt="Me" className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500" />
-                  <div className="absolute inset-0 bg-black/10 mix-blend-overlay pointer-events-none" />
+                  <ImageWithFallback src={myPhoto} alt="Me" className="w-full h-full object-cover object-top transition-all duration-500" />
                </div>
 
                <div className="absolute bottom-2 left-4">
