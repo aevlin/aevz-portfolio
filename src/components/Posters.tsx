@@ -20,24 +20,34 @@ import sameSamePoster from "../../same same but diffelent.png";
 import scrapClassicPoster from "../../scrap.png";
 import scrapPoster from "../../scrap2.png";
 import voiceOfAzurePoster from "../../voice of azure.png";
+import dreamztreeWoodPoster from "../../dreamztree-wood.png";
+import dmPoster from "../../dm2.png";
+import t1Poster from "../../t1.png";
+import scbPoster from "../../scb_01.png";
+import t3InstaPoster from "../../t3-insta.png";
 
 const posters = [
-   { id: "01", src: voiceOfAzurePoster, title: "Voice of Azure", tag: "Show Poster" },
-   { id: "02", src: bestActressPoster, title: "Best Actress", tag: "Award Poster" },
-   { id: "03", src: firewallGardenPoster, title: "Firewall Garden", tag: "Editorial Poster" },
-   { id: "04", src: bugsToBucksPoster, title: "Bugs to Bucks", tag: "Promo Poster" },
-   { id: "05", src: sameSamePoster, title: "Same Same but Different", tag: "Campaign Poster" },
-   { id: "06", src: arcadePoster, title: "Arcade", tag: "Event Poster" },
-   { id: "07", src: scrapPoster, title: "Scrap 2", tag: "Experimental Poster" },
-   { id: "08", src: groupDancePoster, title: "Group Dance", tag: "Fest Poster" },
-   { id: "09", src: mehendiPoster, title: "Mehendi", tag: "Cultural Poster" },
-   { id: "10", src: mimePoster, title: "Mime", tag: "Event Poster" },
-   { id: "11", src: nilavilakuPoster, title: "Nilavilaku", tag: "Cultural Poster" },
-   { id: "12", src: pothichoruPoster, title: "Pothichoru", tag: "Campaign Poster" },
-   { id: "13", src: agmPoster, title: "AGM", tag: "Event Poster" },
-   { id: "14", src: dykkkPoster, title: "DYKKK", tag: "Experimental Poster" },
-   { id: "15", src: jajaPoster, title: "Jaja", tag: "Poster Design" },
-   { id: "16", src: scrapClassicPoster, title: "Scrap", tag: "Poster Design" },
+   { id: "01", src: dmPoster, title: "Direct Message Campaign", tag: "Social Creative" },
+   { id: "02", src: t1Poster, title: "T1 Campaign", tag: "Promo Poster" },
+   { id: "03", src: scbPoster, title: "SCB Campaign", tag: "Social Poster" },
+   { id: "04", src: t3InstaPoster, title: "T3 Instagram", tag: "Digital Creative" },
+   { id: "05", src: dreamztreeWoodPoster, title: "Dreamztree Wood", tag: "Brand Creative" },
+   { id: "06", src: voiceOfAzurePoster, title: "Voice of Azure", tag: "Show Poster" },
+   { id: "07", src: bestActressPoster, title: "Best Actress", tag: "Award Poster" },
+   { id: "08", src: firewallGardenPoster, title: "Firewall Garden", tag: "Editorial Poster" },
+   { id: "09", src: bugsToBucksPoster, title: "Bugs to Bucks", tag: "Promo Poster" },
+   { id: "10", src: sameSamePoster, title: "Same Same but Different", tag: "Campaign Poster" },
+   { id: "11", src: arcadePoster, title: "Arcade", tag: "Event Poster" },
+   { id: "12", src: scrapPoster, title: "Scrap 2", tag: "Experimental Poster" },
+   { id: "13", src: groupDancePoster, title: "Group Dance", tag: "Fest Poster" },
+   { id: "14", src: mehendiPoster, title: "Mehendi", tag: "Cultural Poster" },
+   { id: "15", src: mimePoster, title: "Mime", tag: "Event Poster" },
+   { id: "16", src: nilavilakuPoster, title: "Nilavilaku", tag: "Cultural Poster" },
+   { id: "17", src: pothichoruPoster, title: "Pothichoru", tag: "Campaign Poster" },
+   { id: "18", src: agmPoster, title: "AGM", tag: "Event Poster" },
+   { id: "19", src: dykkkPoster, title: "DYKKK", tag: "Experimental Poster" },
+   { id: "20", src: jajaPoster, title: "Jaja", tag: "Poster Design" },
+   { id: "21", src: scrapClassicPoster, title: "Scrap", tag: "Poster Design" },
 ];
 
 export function Posters() {

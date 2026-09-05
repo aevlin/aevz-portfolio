@@ -1,8 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, Sticker } from "lucide-react";
 import toneUpHero from "../../projects/Design.png";
-import aevflixHome from "../../projects/aevflix front.png";
-import caveraHero from "../../projects/Cavera- Landing Page.png";
 import pgconnectHero from "../../projects/pgconnect.png";
 import whatsappUI from "../../projects/Whatsapp 1990s UI.png";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -15,28 +13,16 @@ export function Projects({ onProjectClick }: { onProjectClick: (id: string) => v
        title: "ToneUp App",
        category: "Mobile Design",
        image: toneUpHero,
-       rotation: -2
-    },
-    {
-       id: "aevflix",
-       title: "AEVFLIX",
-       category: "Web Platform",
-       image: aevflixHome,
-       rotation: 3
-    },
-    {
-       id: "cavera",
-       title: "Cavera",
-       category: "E-Commerce",
-       image: caveraHero,
-       rotation: -1
+       rotation: -2,
+       year: "2025"
     },
     {
        id: "pgconnect",
        title: "PGConnect",
-       category: "Web App",
+       category: "Web App • Accommodation Finder",
        image: pgconnectHero,
        rotation: 1,
+       year: "2025-2026",
        href: "https://aevz-pg-connect.vercel.app"
     },
     {
@@ -44,7 +30,8 @@ export function Projects({ onProjectClick }: { onProjectClick: (id: string) => v
        title: "WhatsApp 90s",
        category: "Concept UI",
        image: whatsappUI,
-       rotation: 2
+       rotation: 2,
+       year: "2025"
     }
   ];
 
@@ -124,7 +111,7 @@ export function Projects({ onProjectClick }: { onProjectClick: (id: string) => v
   );
 }
 
-function ProjectCard({ title, category, image, rotation, index, onClick }: any) {
+function ProjectCard({ title, category, image, rotation, index, onClick, year, tag, subtitle, line1, line2 }: any) {
    return (
       <motion.div 
          initial={{ opacity: 0, y: 50, rotate: rotation }}
@@ -135,7 +122,7 @@ function ProjectCard({ title, category, image, rotation, index, onClick }: any) 
          onClick={onClick}
          className={`relative group cursor-pointer ${index % 2 !== 0 ? 'md:mt-24' : ''} will-change-transform`} 
       >
-         {/* Tape Element - Removed backdrop-blur to prevent glitches */}
+         {/* Tape Element */}
          <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/60 shadow-sm z-20 rotate-1" />
 
          {/* Card Container */}
@@ -143,14 +130,45 @@ function ProjectCard({ title, category, image, rotation, index, onClick }: any) 
             
             {/* Image Wrapper */}
             <div className="relative aspect-[4/3] bg-black overflow-hidden mb-4 border border-black/5">
-               {/* Pre-load image to prevent pop-in */}
+               {/* Pre-load image placeholder */}
                <div className="w-full h-full bg-gray-200 absolute inset-0 animate-pulse" /> 
 
-               <ImageWithFallback 
-                  src={image} 
-                  alt={title}
-                  className="w-full h-full object-cover relative z-10 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0 will-change-transform"
-               />
+               {image ? (
+                 <ImageWithFallback 
+                    src={image} 
+                    alt={title}
+                    className="w-full h-full object-cover relative z-10 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0 will-change-transform"
+                 />
+               ) : (
+                 <div className="relative z-10 flex h-full w-full flex-col justify-between bg-[radial-gradient(circle_at_top,rgba(217,255,0,0.18),transparent_45%),linear-gradient(135deg,#1a1a1a,#090909)] p-6 md:p-8 text-white">
+                    <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-[#D9FF00]">
+                       <span>{tag || "Case Study"}</span>
+                       <span>{year || "2026"}</span>
+                    </div>
+                    <div>
+                       <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.35em] text-gray-400">{subtitle || "Featured Project"}</p>
+                       <div className="text-4xl font-black uppercase tracking-tighter leading-none md:text-5xl">{line1 || title}</div>
+                       <div className="font-editorial-italic text-4xl leading-none text-[#D9FF00] md:text-5xl">{line2 || ""}</div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                       <div className="rounded-lg border border-white/10 bg-black/20 p-3">
+                          <div className="mb-2 h-2 w-12 rounded-full bg-[#D9FF00]/60" />
+                          <div className="space-y-1">
+                             <div className="h-2 w-full rounded-full bg-white/10" />
+                             <div className="h-2 w-4/5 rounded-full bg-white/10" />
+                          </div>
+                       </div>
+                       <div className="rounded-lg border border-white/10 bg-black/20 p-3">
+                          <div className="mb-2 h-2 w-10 rounded-full bg-white/20" />
+                          <div className="grid grid-cols-3 gap-1">
+                             <div className="aspect-square rounded bg-[#D9FF00]/40" />
+                             <div className="aspect-square rounded bg-white/10" />
+                             <div className="aspect-square rounded bg-white/10" />
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+               )}
                
                {/* Hover Overlay with Icon */}
                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center z-20">
@@ -166,7 +184,7 @@ function ProjectCard({ title, category, image, rotation, index, onClick }: any) 
                   {title}
                </h3>
                <span className="font-mono text-xs font-bold text-gray-400 uppercase tracking-widest border-t border-gray-200 pt-2 w-full mt-2">
-                  {category} • 2025
+                  {category} • {year || "2026"}
                </span>
             </div>
 

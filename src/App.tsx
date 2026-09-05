@@ -9,14 +9,12 @@ import { Footer } from "./components/Footer";
 import { CursorEffect } from "./components/CursorEffect";
 import { TakeOffLoader } from "./components/TakeOffLoader";
 import { ToneUp } from "./components/case-studies/ToneUp";
-import { AEVFLIX } from "./components/case-studies/AEVFLIX";
-import { Cavera } from "./components/case-studies/Cavera";
 import { WhatsApp1990s } from "./components/case-studies/WhatsApp1990s";
 import Lenis from 'lenis';
 import { AnimatePresence } from "motion/react";
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<"portfolio" | "toneup" | "aevflix" | "cavera" | "whatsapp1990s">("portfolio");
+  const [currentView, setCurrentView] = useState<"portfolio" | "toneup" | "whatsapp1990s">("portfolio");
   const [loading, setLoading] = useState(true);
   const lenisRef = useRef<Lenis | null>(null);
 
@@ -88,8 +86,6 @@ export default function App() {
   const handleProjectClick = (caseStudy: string) => {
     resetScrollToTop();
     if (caseStudy === "toneup") setCurrentView("toneup");
-    else if (caseStudy === "aevflix") setCurrentView("aevflix");
-    else if (caseStudy === "cavera") setCurrentView("cavera");
     else if (caseStudy === "whatsapp1990s") setCurrentView("whatsapp1990s");
   };
 
@@ -171,8 +167,6 @@ export default function App() {
           ) : (
              <div className="bg-[#050505] text-white w-full relative">
                 {currentView === "toneup" && <ToneUp onBack={handleBackToPortfolio} />}
-                {currentView === "aevflix" && <AEVFLIX onBack={handleBackToPortfolio} />}
-                {currentView === "cavera" && <Cavera onBack={handleBackToPortfolio} />}
                 {currentView === "whatsapp1990s" && <WhatsApp1990s onBack={handleBackToPortfolio} />}
              </div>
           )}
@@ -181,3 +175,4 @@ export default function App() {
     </div>
   );
 }
+

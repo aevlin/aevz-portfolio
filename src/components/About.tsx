@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Star } from "lucide-react";
+import { Star, Award } from "lucide-react";
 
 // External Devicon URLs
 const icons = {
@@ -97,15 +97,15 @@ export function About() {
                           <span>Amal Jyothi College of Engineering</span>
                           <span>2027</span>
                        </div>
-                       <p className="text-black/70 text-xs">Computer Science & Engineering</p>
+                       <p className="text-black/70 text-xs">B.Tech in Computer Science & Engineering</p>
                     </div>
 
                     <div className="border-b border-black/10 pb-4">
                        <div className="flex justify-between font-bold mb-1">
                           <span>Girideepam Bethany</span>
-                          <span>2022-23</span>
+                          <span>2023</span>
                        </div>
-                       <p className="text-black/70 text-xs">Higher Secondary School</p>
+                       <p className="text-black/70 text-xs">Class XII — Computer Science — Kottayam</p>
                     </div>
                  </div>
 
@@ -115,7 +115,7 @@ export function About() {
 
 
               {/* SKILLS SECTION */}
-              <div className="mt-8">
+              <div className="mt-4">
                  <h3 className="text-2xl font-black text-white uppercase mb-6 flex items-center gap-2">
                     <Star className="text-[#D9FF00] fill-[#D9FF00]" /> My Tools
                  </h3>
@@ -137,119 +137,136 @@ export function About() {
                  </div>
               </div>
 
+              {/* CERTIFICATIONS SECTION */}
+              <div className="bg-[#111111] p-6 rounded-xl border border-white/10">
+                 <h3 className="text-xl font-black text-white uppercase mb-4 flex items-center gap-2">
+                    <Award className="text-[#D9FF00]" /> Certifications
+                 </h3>
+                 <ul className="space-y-2 font-mono text-xs text-gray-300">
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> Google UX Design Professional Certificate — Google</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> Complete Front-End Development Journey — Infosys Springboard</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> Creating Responsive Web Pages using Bootstrap 4 — Infosys Springboard</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> Introduction to UI/UX Design — Infosys Springboard</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> Programming for Everybody (Python) — University of Michigan</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> AI Fundamentals & Introduction to AI — IBM</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> Foundations of Cybersecurity — Google</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D9FF00]">•</span> Cybersecurity Analyst Job Simulation — Tata Group via Forage</li>
+                 </ul>
+              </div>
+
            </div>
 
 
-           {/* RIGHT COLUMN: Experience Receipt */}
-           <div className="md:col-span-7">
-              <motion.div 
-                 initial={{ y: 50, opacity: 0 }}
-                 whileInView={{ y: 0, opacity: 1 }}
-                 viewport={{ once: true }}
-                 className="bg-white text-black p-6 md:p-10 relative shadow-2xl mx-auto max-w-lg rotate-1 origin-top-left"
-              >
-                 {/* Receipt Header */}
-                 <div className="text-center border-b-2 border-dashed border-black/20 pb-6 mb-8">
-                    <h3 className="text-5xl font-black tracking-tighter mb-2">experience</h3>
-                    <p className="font-mono text-xs text-gray-500 uppercase tracking-widest">Official Record • Aevlin Prince</p>
-                 </div>
+               {/* RIGHT COLUMN: Experience Receipt */}
+               <div className="md:col-span-7">
+                  <motion.div 
+                     initial={{ y: 50, opacity: 0 }}
+                     whileInView={{ y: 0, opacity: 1 }}
+                     viewport={{ once: true }}
+                     className="bg-white text-black p-6 md:p-10 relative shadow-2xl mx-auto max-w-lg rotate-1 origin-top-left"
+                  >
+                     {/* Receipt Header */}
+                     <div className="text-center border-b-2 border-dashed border-black/20 pb-6 mb-8">
+                        <h3 className="text-5xl font-black tracking-tighter mb-2">experience</h3>
+                        <p className="font-mono text-xs text-gray-500 uppercase tracking-widest">Official Record • Aevlin Prince</p>
+                     </div>
 
-                 {/* List */}
-                 <div className="space-y-8 relative">
-                    {/* Vertical Dotted Line */}
-                    <div className="absolute left-[7px] top-2 bottom-2 w-[2px] border-l-2 border-dotted border-black/20 hidden md:block" />
-                    <ExperienceItem 
-                       role="Graphic Designer" 
-                       org="Dreamztree Training Academy and Consultancy" 
-                       date="June 2026 - Present" 
-                       startDate="June 2026"
-                       isCurrent
-                    />
-                    <ExperienceItem 
-                       role="Graphic Designer" 
-                       org="Hexa Apiarium Pvt. Ltd" 
-                       date="May 2026 - Present" 
-                       startDate="May 2026"
-                       isCurrent
-                    />
-                    <ExperienceItem 
-                       role="UI/UX Developer" 
-                       org="NOVIQ LABS" 
-                       date="March 2026 - Present" 
-                       startDate="March 2026"
-                       isCurrent
-                    />
-                    <ExperienceItem 
-                       role="Media Lead" 
-                       org="National Service Scheme" 
-                       date="July 2025 - Present" 
-                       startDate="July 2025"
-                       isCurrent
-                    />
-                    <ExperienceItem 
-                       role="Design Co-Lead" 
-                       org="IEEE SB AJCE" 
-                       date="March 2025 - March 2026" 
-                       startDate="March 2025"
-                       endDate="March 2026"
-                    />
-                    <ExperienceItem 
-                       role="Web Design Intern" 
-                       org="Tisser Technologies LLP" 
-                       date="April 2025" 
-                       startDate="April 2025"
-                       endDate="April 2025"
-                       desc="Built responsive web pages using HTML, CSS, Bootstrap, & JS."
-                    />
-                    <ExperienceItem 
-                       role="Graphic Designer" 
-                       org="TEDx AJCE" 
-                       date="May 2026" 
-                       startDate="May 2026"
-                       endDate="May 2026"
-                    />
-                    <ExperienceItem 
-                       role="Sub Committee Lead" 
-                       org="NASA Space Apps" 
-                       date="2025 - 2026" 
-                       duration="Completed"
-                    />
-                    <ExperienceItem 
-                       role="Design Lead-W" 
-                       org="ACM AJCE STUDENT CHAPTER" 
-                       date="Apr 2024 - Mar 2025" 
-                       startDate="Apr 2024"
-                       endDate="Mar 2025"
-                    />
-                 </div>
+                     {/* List */}
+                     <div className="space-y-8 relative">
+                        {/* Vertical Dotted Line */}
+                        <div className="absolute left-[7px] top-2 bottom-2 w-[2px] border-l-2 border-dotted border-black/20 hidden md:block" />
+                        <ExperienceItem 
+                           role="Graphic Designer" 
+                           org="Dreamztree Training Academy" 
+                           date="Jun 2026 - Aug 2026" 
+                           startDate="June 2026"
+                           endDate="August 2026"
+                        />
+                        <ExperienceItem 
+                           role="Graphic Designer (Freelance)" 
+                           org="Hexa Apiarium Pvt. Ltd" 
+                           date="May 2026 - Aug 2026" 
+                           startDate="May 2026"
+                           endDate="August 2026"
+                        />
+                        <ExperienceItem 
+                           role="UI/UX Developer Intern" 
+                           org="NOVIQ LABS" 
+                           date="Jan 2026 - Jul 2026" 
+                           startDate="January 2026"
+                           endDate="July 2026"
+                        />
+                        <ExperienceItem 
+                           role="Graphic Designer" 
+                           org="TEDx AJCE" 
+                           date="May 2026" 
+                           startDate="May 2026"
+                           endDate="May 2026"
+                        />
+                        <ExperienceItem 
+                           role="Media Lead & Volunteer" 
+                           org="NSS, Amal Jyothi College" 
+                           date="Jul 2025 - Apr 2026" 
+                           startDate="July 2025"
+                           endDate="April 2026"
+                        />
+                        <ExperienceItem 
+                           role="Design Co-Lead" 
+                           org="IEEE SB AJCE" 
+                           date="Mar 2025 - Mar 2026" 
+                           startDate="March 2025"
+                           endDate="March 2026"
+                        />
+                        <ExperienceItem 
+                           role="Committee Lead" 
+                           org="NASA Space Apps Challenge" 
+                           date="Oct 2025" 
+                           startDate="October 2025"
+                           endDate="October 2025"
+                        />
+                        <ExperienceItem 
+                           role="Web Design Intern" 
+                           org="Tisser Technologies" 
+                           date="Apr 2025" 
+                           startDate="April 2025"
+                           endDate="April 2025"
+                        />
+                        <ExperienceItem 
+                           role="Design Lead (Women's Chapter)" 
+                           org="ACM AJCE Student Chapter" 
+                           date="Apr 2024 - Mar 2025" 
+                           startDate="April 2024"
+                           endDate="March 2025"
+                        />
+                     </div>
 
-                 {/* Receipt Footer / Barcode */}
-                 <div className="mt-12 pt-8 border-t-2 border-dashed border-black/20 flex flex-col items-center gap-4">
-                    <div className="w-full h-12 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/UPC-A-036000291452.svg/1200px-UPC-A-036000291452.svg.png')] bg-cover opacity-80 mix-blend-multiply" />
-                    <p className="font-mono text-[10px] text-center text-gray-400">
-                       THANK YOU FOR VISITING • AUTHENTICATED
-                    </p>
-                 </div>
+                     {/* Receipt Footer / Barcode */}
+                     <div className="mt-12 pt-8 border-t-2 border-dashed border-black/20 flex flex-col items-center gap-4">
+                        <div className="w-full h-12 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/UPC-A-036000291452.svg/1200px-UPC-A-036000291452.svg.png')] bg-cover opacity-80 mix-blend-multiply" />
+                        <p className="font-mono text-[10px] text-center text-gray-400">
+                           THANK YOU FOR VISITING • AUTHENTICATED RECORD
+                        </p>
+                     </div>
 
-                 {/* Paper Texture Overlay */}
-                 <div className="absolute inset-0 bg-[#f0f0f0] opacity-30 mix-blend-multiply pointer-events-none" />
-                 
-                 {/* Top Jagged Edge (CSS Trick) */}
-                 <div className="absolute -top-2 left-0 w-full h-4 bg-transparent" 
-                      style={{ 
-                         background: "linear-gradient(135deg, transparent 33%, #fff 33%, #fff 66%, transparent 66%)", 
-                         backgroundSize: "20px 40px" 
-                      }} 
-                 />
-                 {/* Bottom Jagged Edge */}
-                 <div className="absolute -bottom-2 left-0 w-full h-4 bg-transparent rotate-180" 
-                      style={{ 
-                         background: "linear-gradient(135deg, transparent 33%, #fff 33%, #fff 66%, transparent 66%)", 
-                         backgroundSize: "20px 40px" 
-                      }} 
-                 />
-              </motion.div>
-           </div>
+                     {/* Paper Texture Overlay */}
+                     <div className="absolute inset-0 bg-[#f0f0f0] opacity-30 mix-blend-multiply pointer-events-none" />
+                     
+                     {/* Top Jagged Edge */}
+                     <div className="absolute -top-2 left-0 w-full h-4 bg-transparent" 
+                          style={{ 
+                             background: "linear-gradient(135deg, transparent 33%, #fff 33%, #fff 66%, transparent 66%)", 
+                             backgroundSize: "20px 40px" 
+                          }} 
+                     />
+                     {/* Bottom Jagged Edge */}
+                     <div className="absolute -bottom-2 left-0 w-full h-4 bg-transparent rotate-180" 
+                          style={{ 
+                             background: "linear-gradient(135deg, transparent 33%, #fff 33%, #fff 66%, transparent 66%)", 
+                             backgroundSize: "20px 40px" 
+                          }} 
+                     />
+                  </motion.div>
+               </div>
 
         </div>
 
@@ -313,7 +330,7 @@ function formatDuration(startDate?: string, endDate?: string) {
    return `${years} year${years === 1 ? "" : "s"} ${months} month${months === 1 ? "" : "s"}`;
 }
 
-function ExperienceItem({ role, org, date, duration, startDate, endDate, desc, isCurrent }: any) {
+function ExperienceItem({ role, org, date, duration, startDate, endDate, isCurrent }: any) {
    const computedDuration = formatDuration(startDate, endDate);
    const displayDuration = computedDuration ?? duration;
 
@@ -329,7 +346,7 @@ function ExperienceItem({ role, org, date, duration, startDate, endDate, desc, i
          
          <p className="font-black text-xs uppercase tracking-wide mb-1 text-black/80">{org}</p>
          
-         <div className="flex items-center gap-2 mb-2">
+         <div className="flex items-center gap-2">
             <span className="bg-black text-white text-[10px] px-2 py-0.5 rounded-sm font-mono">
                {date}
             </span>
@@ -339,12 +356,6 @@ function ExperienceItem({ role, org, date, duration, startDate, endDate, desc, i
                </span>
             )}
          </div>
-
-         {desc && (
-            <p className="text-xs text-gray-500 font-mono leading-relaxed mt-2 border-l-2 border-gray-200 pl-2">
-               {desc}
-            </p>
-         )}
       </div>
    );
 }
